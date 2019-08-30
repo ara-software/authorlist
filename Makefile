@@ -1,7 +1,7 @@
 
 .PHONY: all 
 
-tgts=output/anita_authors.html output/anita_authors.txt output/anita_authors_revtex.tex output/anita_institutes_revtex.tex output/anita_elsarticle_authors.tex output/anita_pos_authors.tex
+tgts=output/anita_authors.html output/anita_authors.txt output/anita_authors_revtex.tex output/anita_institutes_revtex.tex output/anita_elsarticle_authors.tex output/anita_icrc_authors.tex output/anita_pos_authors.tex
 
 all: index.html 
 

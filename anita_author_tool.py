@@ -215,45 +215,72 @@ f_elsarticle_authors.close()
 
 # pos_authors.tex 
 
-f_pos_authors_tex = open(prefix +"pos_authors.tex","w") 
-f_pos_authors_tex.write("%% PoS list for %s Collaboration\n\n" % (collaboration));  
+f_pos_authors = open(prefix +"pos_authors.tex","w") 
+f_pos_authors.write("%% PoS list for %s Collaboration\n\n" % (collaboration));  
 first = True
 
-f_pos_authors_tex.write("\\author{\n"); 
+f_pos_authors.write("\\author{\n"); 
 
-f_pos_authors_tex.write("  (%s Collaboration)\n" % (collaboration)); 
+f_pos_authors.write("  (%s Collaboration)\n" % (collaboration)); 
 
 for author in authors: 
   name = author[0].replace(" ","~")
   if not first: 
-    f_pos_authors_tex.write(",\n"); 
-  f_pos_authors_tex.write("  %s" % (name)); 
+    f_pos_authors.write(",\n"); 
+  f_pos_authors.write("  %s" % (name)); 
   affs = "" 
   for aff in author[1]: 
     if affs != "": 
       affs += ","
     affs += str(institute_numbers[aff])
  
-  f_pos_authors_tex.write("$^{%s}$"%(affs))
+  f_pos_authors.write("$^{%s}$"%(affs))
   first = False
 
-f_pos_authors_tex.write("\n\n\\\\\n"); 
+f_pos_authors.write("\n\n\\\\\n"); 
 first = True
 for i in range(len(sorted_institutes)): 
   if not first: 
-    f_pos_authors_tex.write(",\n") 
-  f_pos_authors_tex.write(" $^{%d}$%s"%( i+1, tex_escape(institutes[sorted_institutes[i]][1]))) 
+    f_pos_authors.write(",\n") 
+  f_pos_authors.write(" $^{%d}$%s"%( i+1, tex_escape(institutes[sorted_institutes[i]][1]))) 
   first = False 
 
-f_pos_authors_tex.write("\n}\n"); 
+f_pos_authors.write("\n}\n"); 
+f_pos_authors.close()
+
+
+## ICRC authors
+f_icrc_authors = open(prefix + "icrc_authors.tex","w"); 
+f_icrc_authors.write("%% ICRC list for %s Collaboration\n\n" % (collaboration));  
+
+
+first = True
+num_institutes = 0 
+f_icrc_authors.write("\\noindent\n")
+for author in authors: 
+
+  name = author[0].replace(" ","~")
+
+  if not first: 
+    f_icrc_authors.write(", \n"); 
+  f_icrc_authors.write(name); 
+
+  first_aff = True
+  for aff in author[1]:
+    if not first_aff:
+      f_icrc_authors.write("\\textsuperscript{,}"); 
+    if institute_numbers[aff] > num_institutes: 
+      f_icrc_authors.write("\\footnote[%d]{%s\label{inst%d}}" % (institute_numbers[aff], institutes[aff][0], institute_numbers[aff]))
+      num_institutes+=1 
+    else:
+      f_icrc_authors.write("\\textsuperscript{%d}" % (institute_numbers[aff]) ); 
+    first_aff = False
+  first = False
+
+f_icrc_authors.close()
 
 
 
-
-
-
-
-f_pos_authors_tex.close()
 
 
 
