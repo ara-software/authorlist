@@ -1,14 +1,14 @@
 #!/usr/bin/env python 
 
-## ANITA Author Tool to save time on author lists... 
+## ARA Author Tool to save time on author lists... 
 #  Cosmin Deaconu <cozzyd@kicp.uchicago.edu> 
 #  apologies for the semicolons, it's a reflex at this point... 
 #  This is about as brute force as it gets :)
 
 import sys
 
-prefix = "anita_"  #prefix for all output files  (first argument overrideS) 
-collaboration = "ANITA"  # (second argument overrides) 
+prefix = "ara_"  #prefix for all output files  (first argument overrideS) 
+collaboration = "ARA"  # (second argument overrides) 
 
 
 if len(sys.argv) > 1: 
