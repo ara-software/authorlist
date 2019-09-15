@@ -23,7 +23,7 @@ e.g.
 
 Output is generated in several formats: 
 
-  - `ara_revtex_authors.tex` and `anita_revtex_institutes.txt` for use with revtex journals
+  - `ara_revtex_authors.tex` and `ara_revtex_institutes.txt` for use with revtex journals
   - `ara_elsarticle_authors.tex`  for use with elsevier journals
   - `ara_pos_authors.tex` for use with PoS (a sort of raw format)
   - `ara_icrc_authors.tex` for use with the 2019 ICRC authorlist format. 
