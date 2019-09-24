@@ -197,7 +197,7 @@ f_elsarticle_authors.write("\\collaboration{%s Collaboration}\n\n" % (collaborat
 for key in sorted_institutes: 
   num = institute_numbers[key]; 
   addr = tex_escape(institutes[key][0]) ; 
-  f_elsarticle_authors.write("\\affiliation[%d]{%s}\n" % (num, addr)); 
+  f_elsarticle_authors.write("\\address[%d]{%s}\n" % (num, addr)); 
 
 f_elsarticle_authors.write("\n\n"); 
 
