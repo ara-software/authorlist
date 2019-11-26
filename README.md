@@ -4,7 +4,7 @@ This is a centralized store for ARA author lists.
 
 There are two files used as input, authors.in and institutions.in
 
-Running make will then generate the other files (using a python script). 
+Running `make` will then generate the other files (using a python script). 
 
 institutions.txt defines a mapping of institution id's to addresses in a |-separated manner, e.g., including an optional short name (used for PoS) 
 
