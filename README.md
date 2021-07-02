@@ -2,23 +2,42 @@
 
 This is a centralized store for ARA author lists. 
 
-There are two files used as input, authors.in and institutions.in
+There are two files used as input, authors_in.yaml and institutions_in.yaml
 
 Running `make` will then generate the other files (using a python script). 
 
-institutions.txt defines a mapping of institution id's to addresses in a |-separated manner, e.g., including an optional short name (used for PoS) 
+institutions_in.yml defines a mapping of institution id's to addresses, including an optional short name (used for PoS). Use standard YAML syntax, for example:
 
-`UC | Dept. of Physics, Enrico Fermi Inst., Kavli Inst. for Cosmological Physics, Univ. of Chicago, Chicago, IL 60637. | University of Chicago` 
+```yaml
+UC:
+  instituteid: UC
+  shortid: University of Chicago
+  address: Dept. of Physics, Enrico Fermi Institue, Kavli Institute for Cosmological Physics, University of Chicago, Chicago, IL 60637 
+```
 
+The format of authors_in.yaml is 
 
-The format of authors.txt is 
+```yaml
+C. Deaconu:
+  authlistname: C. Deaconu
+  affiliations: 
+    - UC
+  orcid: 0000-0002-4953-6397
+```
 
+If the orcid of the author is known, it can also be added. Currently the only
+supported fields are `authlistname`, `affiliations`, and `orcid`.
+An author can have more than one affiliation; for example:
 
-`NAME  | INSTITUTION_ID1 | [ INSTIUTION_ID2 | etc.. ] `
+```yaml
+D.Z. Besson:
+  authlistname: D.Z. Besson
+  affiliations: 
+    - KU
+    - Moscow
+  orcid: 0000-0001-6733-963X
+```
 
-e.g. 
-
-`C. Deaconu. | UC`
 
 
 Output is generated in several formats: 
