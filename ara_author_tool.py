@@ -1,11 +1,15 @@
 #!/usr/bin/env python 
 
 ## ARA Author Tool to save time on author lists... 
-#  Cosmin Deaconu <cozzyd@kicp.uchicago.edu> 
+#  Cosmin Deaconu <cozzyd@kicp.uchicago.edu>
 #  apologies for the semicolons, it's a reflex at this point... 
 #  This is about as brute force as it gets :)
 
 import sys
+try:
+  import yaml
+except ImportError:
+  raise ImportError('yaml is not installed')
 
 prefix = "ara_"  #prefix for all output files  (first argument overrideS) 
 collaboration = "ARA"  # (second argument overrides) 
@@ -59,43 +63,27 @@ for line in finst.readlines():
 
 
 # Then open the authors list 
-
-fauth = open("authors.in")
-
-lineno = 0
+# this is now loaded as a yaml file, which is more hierarchical 
+# and requires less manual parsing
 
 authors = [] 
 sorted_institutes = [] 
 institute_numbers = {}
 
-for line in fauth.readlines(): 
-  line = line.strip()
-  lineno+=1 
-  if len(line) == 0:
-    continue
-  if line[0] == "#": 
-    continue
-
-  tokens = line.split("|"); 
-  if len(tokens) == 1: 
-    print(" WARNING: No affiliation on line %d" % (lineno))
-
-  author = tokens[0].strip()
+fauth = open('authors_in.yaml')
+parsed_fauth = yaml.safe_load(fauth)
+for author in parsed_fauth:
+  authlistname = parsed_fauth[author]['authlistname']
   affiliations = []
-
-  for t in tokens[1:]: 
-    aff = t.strip() 
-    if aff not in institutes: 
+  for aff in parsed_fauth[author]['affiliations']:
+    if aff not in institutes:
       print(" WARNING, no key for %s found in institutes.in" % (aff))
-    else: 
+    else:
       if aff not in sorted_institutes: 
-        sorted_institutes.append(aff) 
-        institute_numbers[aff] = len(sorted_institutes) 
+        sorted_institutes.append(aff)
+        institute_numbers[aff] = len(sorted_institutes)
       affiliations.append(aff) 
-
-  authors.append((author,affiliations)) 
-
-
+  authors.append((authlistname,affiliations))     
 
 
 # authors.txt 
