@@ -9,7 +9,7 @@ clean:
 	@rm -rf output 
 	@rm -f index.html 
 
-$(tgts): authors.in institutes.in ara_author_tool.py | output 
+$(tgts): authors_in.yaml institutes_in.yaml ara_author_tool.py | output
 	@echo Running ara_author_tool.py
 	@./ara_author_tool.py output/ara_ 
 

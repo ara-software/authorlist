@@ -1,0 +1,105 @@
+CalPoly:
+  instituteid: CalPoly
+  shortid: California Polytechnic State University
+  address: Physics Dept., California Polytechnic State University, San Luis Obispo, CA 93407
+
+Chiba:
+  instituteid: Chiba
+  shortid: Chiba University
+  address: Dept. of Physics, Chiba University, Chiba, Japan
+
+Denison:
+  instituteid: Denison
+  shortid: Denison University
+  address: Dept. of Physics and Astronomy, Denison University, Granville, Ohio 43023
+
+KU:
+  instituteid: KU
+  shortid: Kansas University
+  address: Dept. of Physics and Astronomy, University of Kansas, Lawrence, KS 66045
+
+Moscow:
+  instituteid: Moscow
+  shortid: Moscow Engineering Physics Institute
+  address: Moscow Engineering Physics Institute, Moscow, Russia
+
+MSU:
+  instituteid: MSU
+  shortid: Michigan State University
+  address: Dept. of Physics and Astronomy, Michigan State University, East Lansing, Michigan 48824
+
+NTU:
+  instituteid: NTU
+  shortid: National Taiwan University
+  address: Dept. of Physics, Grad. Inst. of Astrophys., Leung Center for Cosmology and Particle Astrophysics, National Taiwan University, Taipei, Taiwan
+
+OSU:
+  instituteid: OSU
+  shortid: The Ohio State University
+  address: Dept. of Physics, Center for Cosmology and AstroParticle Physics, The Ohio State University, Columbus, OH 43210
+
+PSUast:
+  instituteid: PSUast
+  shortid: Dept. of Astronomy and Astrophysics, Pennsylvania State University, University Park, PA 16802
+  address: Dept. of Astronomy and Astrophysics, Pennsylvania State University, University Park, PA 16802
+
+PSUigc:
+  instituteid: PSUigc
+  shortid: Center for Multi-Messenger Astrophysics, Institute for Gravitation and the Cosmos, Pennsylvania State University, University Park, PA 16802
+  address: Center for Multi-Messenger Astrophysics, Institute for Gravitation and the Cosmos, Pennsylvania State University, University Park, PA 16802
+
+PSUphys:
+  instituteid: PSUphys
+  shortid: Dept. of Physics, Pennsylvania State University, University Park, PA 16802
+  address: Dept. of Physics, Pennsylvania State University, University Park, PA 16802
+
+UC:
+  instituteid: UC
+  shortid: University of Chicago
+  address: Dept. of Physics, Enrico Fermi Institue, Kavli Institute for Cosmological Physics, University of Chicago, Chicago, IL 60637
+
+UCL:
+  instituteid: UCL
+  shortid: University College London
+  address: Dept. of Physics and Astronomy, University College London, London, United Kingdom
+
+UD:
+  instituteid: UD
+  shortid: University of Delaware
+  address: Dept. of Physics, University of Delaware, Newark, DE 19716
+
+UH:
+  instituteid: UH
+  shortid: University of Hawaii
+  address: Dept. of Physics and Astronomy, University of Hawaii, Manoa, HI 96822
+
+UMD:
+  instituteid: UMD
+  shortid: University of Maryland
+  address: Dept. of Physics, University of Maryland, College Park, MD 20742
+
+UNL:
+  instituteid: UNL
+  shortid: University of Nebraska-Lincoln
+  address: Dept. of Physics and Astronomy, University of Nebraska, Lincoln, Nebraska 68588
+
+UW:
+  instituteid: UW
+  shortid: University of Wisconsin-Madison
+  address: Dept. of Physics, University of Wisconsin-Madison, Madison,  WI 53706
+
+VUB:
+  instituteid: VUB
+  shortid: Vrije Universiteit Brussel
+  address: Vrije Universiteit Brussel, Brussels, Belgium
+
+Weizman:
+  instituteid: Weizman
+  shortid: Weizmann Institute
+  address: Weizmann Institute of Science, Rehovot, Israel
+
+Whittier:
+  instituteid: Whittier
+  shortid: Whittier College
+  address: Dept. Physics and Astronomy, Whittier College, Whittier, CA 90602
+

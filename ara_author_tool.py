@@ -34,26 +34,18 @@ def html_escape(string):
 
 
 
-# Start by opening the institutes.in 
-finst = open("institutes.in") 
-
+# Start by opening the institute list (institutes_in.yaml)
+# this is now loaded as a yaml file, which is more hierarchical 
+# and requires less manual parsing
 institutes = {} 
-for line in finst.readlines(): 
 
+finst = open("institutes_in.yaml")
+parsed_finst = yaml.safe_load(finst)
+for inst in parsed_finst:
 
-  line = line.strip()
-  if len(line) == 0:
-    continue
-  if line[0] == "#": 
-    continue
-
-  tokens = line.split("|"); 
-  if len(tokens) < 2:
-    continue 
-
-  inst_id = tokens[0].strip() 
-  inst_addr = tokens[1].strip() 
-  inst_short = inst_addr if len(tokens) < 3 else tokens[2].strip() 
+  inst_id = parsed_finst[inst]['instituteid']
+  inst_addr = parsed_finst[inst]['address']
+  inst_short = parsed_finst[inst]['shortid']
 
   if inst_id in institutes: 
     print( "WARNING: duplicate ID \"%s\" found! Replacing existing." % (inst_id))
@@ -62,9 +54,7 @@ for line in finst.readlines():
 
 
 
-# Then open the authors list 
-# this is now loaded as a yaml file, which is more hierarchical 
-# and requires less manual parsing
+# Then open the authors list (authors_in.yaml)
 
 authors = [] 
 sorted_institutes = [] 
