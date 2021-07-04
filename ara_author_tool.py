@@ -215,12 +215,12 @@ for author in authors:
   f_pos_authors.write("$^{%s}$"%(affs))
   first = False
 
-f_pos_authors.write("\n\n\\\\\n"); 
+f_pos_authors.write("\n\\\\\n\\\\\n");
 first = True
 for i in range(len(sorted_institutes)): 
   # if not first:
     # f_pos_authors.write(",\n")
-  f_pos_authors.write(" $^{%d}$%s\\\\\n"%( i+1, tex_escape(institutes[sorted_institutes[i]][1])))
+  f_pos_authors.write(" $^{%d}$%s\\\\\n"%( i+1, tex_escape(institutes[sorted_institutes[i]][0])))
   first = False 
 
 f_pos_authors.write("\n}\n"); 
