@@ -218,9 +218,9 @@ for author in authors:
 f_pos_authors.write("\n\n\\\\\n"); 
 first = True
 for i in range(len(sorted_institutes)): 
-  if not first: 
-    f_pos_authors.write(",\n") 
-  f_pos_authors.write(" $^{%d}$%s"%( i+1, tex_escape(institutes[sorted_institutes[i]][1]))) 
+  # if not first:
+    # f_pos_authors.write(",\n")
+  f_pos_authors.write(" $^{%d}$%s\\\\\n"%( i+1, tex_escape(institutes[sorted_institutes[i]][1])))
   first = False 
 
 f_pos_authors.write("\n}\n"); 
