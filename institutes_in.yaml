@@ -40,17 +40,17 @@ OSU:
 
 PSUast:
   instituteid: PSUast
-  shortid: Dept. of Astronomy and Astrophysics, Pennsylvania State University, University Park, PA 16802
+  shortid: Department of Astronomy and Astrophysics, Pennsylvania State University
   address: Dept. of Astronomy and Astrophysics, Pennsylvania State University, University Park, PA 16802
 
 PSUigc:
   instituteid: PSUigc
-  shortid: Center for Multi-Messenger Astrophysics, Institute for Gravitation and the Cosmos, Pennsylvania State University, University Park, PA 16802
+  shortid: Center for Multi-Messenger Astrophysics, Institute for Gravitation and the Cosmos
   address: Center for Multi-Messenger Astrophysics, Institute for Gravitation and the Cosmos, Pennsylvania State University, University Park, PA 16802
 
 PSUphys:
   instituteid: PSUphys
-  shortid: Dept. of Physics, Pennsylvania State University, University Park, PA 16802
+  shortid: Dept. of Physics, Pennsylvania State University
   address: Dept. of Physics, Pennsylvania State University, University Park, PA 16802
 
 UC:
