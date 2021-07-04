@@ -70,6 +70,12 @@ L. Cremonesi:
     - UCL
   orcid: 0000-0003-0711-1056
 
+P. Dasgupta:
+  authlistname: P. Dasgupta
+  affiliations:
+    - ULB
+  orcid: 0000-0002-9559-4803
+
 J. Davies:
   authlistname: J. Davies
   affiliations: 
@@ -99,6 +105,12 @@ M. A. DuVernois:
     - UW
   orcid: 0000-0002-2987-9691
 
+J. Flaherty:
+  authlistname: J. Flaherty
+  affiliations:
+    - OSU
+  orcid: 0000-0003-3609-7361
+
 E. Friedman:
   authlistname: E. Friedman
   affiliations: 
@@ -118,6 +130,11 @@ K. Hanson:
   authlistname: K. Hanson
   affiliations: 
     - UW
+
+N. Harty:
+  authlistname: N. Harty
+  affiliations:
+    - UD
 
 B. Hendricks:
   authlistname: B. Hendricks
@@ -208,6 +225,7 @@ R. Krebs:
   affiliations: 
     - PSUigc
     - PSUphys
+    - PSUast
 
 Y. Ku:
   authlistname: Y. Ku
@@ -229,6 +247,7 @@ U.A. Latif:
   authlistname: U.A. Latif
   affiliations: 
     - KU
+    - VUB
   orcid: 0000-0002-7609-1266
 
 A. Laundrie:
@@ -322,6 +341,11 @@ C. Pfendner:
     - Denison
   orcid: 0000-0001-6475-7289
 
+N. Punsuebsay:
+  authlistname: N. Punsuebsay
+  affiliations:
+    - UD
+
 J. Roth:
   authlistname: J. Roth
   affiliations: 
@@ -351,6 +375,12 @@ D. Smith:
   authlistname: D. Smith
   affiliations: 
     - UC
+
+S. Toscano:
+  authlistname: S. Toscano
+  affiliations:
+    - ULB
+  orcid: 0000-0002-1860-2240
 
 J. Torres:
   authlistname: J. Torres

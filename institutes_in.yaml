@@ -73,6 +73,11 @@ UH:
   shortid: University of Hawaii
   address: Dept. of Physics and Astronomy, University of Hawaii, Manoa, HI 96822
 
+ULB:
+  instituteid: ULB
+  shortid: Universite Libre de Bruxelles
+  address: Universite Libre de Bruxelles, Science Faculty CP230, B-1050 Brussels, Belgium
+
 UMD:
   instituteid: UMD
   shortid: University of Maryland
