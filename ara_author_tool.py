@@ -6,6 +6,7 @@
 #  This is about as brute force as it gets :)
 
 import sys
+import datetime
 try:
   import yaml
 except ImportError:
@@ -72,8 +73,13 @@ for author in parsed_fauth:
       if aff not in sorted_institutes: 
         sorted_institutes.append(aff)
         institute_numbers[aff] = len(sorted_institutes)
-      affiliations.append(aff) 
-  authors.append((authlistname,affiliations))     
+      affiliations.append(aff)
+  authorids = {}
+  if 'orcid' in parsed_fauth[author]:
+    authorids['orcid'] = parsed_fauth[author]['orcid']
+  if 'inspireid' in parsed_fauth[author]:
+    authorids['inspireid'] = parsed_fauth[author]['inspireid']
+  authors.append((authlistname,affiliations,authorids))     
 
 
 # authors.txt 
@@ -248,24 +254,78 @@ for author in authors:
     if not first_aff:
       f_icrc_authors.write("\\textsuperscript{,}"); 
     if institute_numbers[aff] > num_institutes: 
-      f_icrc_authors.write("\\footnote[%d]{%s\label{inst%d}}" % (institute_numbers[aff], institutes[aff][0], institute_numbers[aff]))
+      #f_icrc_authors.write("\\footnote[%d]{%s\label{inst%d}}" % (institute_numbers[aff], institutes[aff][0], institute_numbers[aff]))
+      f_icrc_authors.write("\\textsuperscript{%d}" % (institute_numbers[aff]))
       num_institutes+=1 
     else:
       f_icrc_authors.write("\\textsuperscript{%d}" % (institute_numbers[aff]) ); 
     first_aff = False
   first = False
 
+f_icrc_authors.write("\n\\\\\n\\\\\n")
+for i in range(len(sorted_institutes)): 
+  f_icrc_authors.write("\\textsuperscript{%d} %s\\\\\n"%( i+1, institutes[sorted_institutes[i]][0])) 
+
 f_icrc_authors.close()
 
+## author XML file
+f_xml_authors = open(prefix + "authors.xml","w")
 
+# initial header info (DO NOT CHANGE)
+f_xml_authors.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+f_xml_authors.write('<!DOCTYPE collaborationauthorlist SYSTEM "author.dtd">\n')
 
+f_xml_authors.write('<collaborationauthorlist\n')
+f_xml_authors.write('\txmlns:foaf="http://xmlns.com/foaf/0.1/"\n')
+f_xml_authors.write('\txmlns:cal="http://inspirehep.net/info/HepNames/tools/authors_xml/">\n\n')
 
+# publication specific info - it's expected that the publication reference is entered by hand after generation
+now = datetime.datetime.now()
+f_xml_authors.write('\t<cal:creationDate>%s</cal:creationDate>\n' % now.strftime("%Y-%m-%d_%H:%M"))
+f_xml_authors.write('\t<cal:publicationReference>ENTER ARXIV URL HERE</cal:publicationReference>\n\n')
 
+# collaboration info
+f_xml_authors.write('\t<cal:collaborations>\n')
+f_xml_authors.write('\t\t<cal:collaboration id="ara">\n')
+f_xml_authors.write('\t\t\t<foaf:name>ARA</foaf:name>\n')
+f_xml_authors.write('\t\t</cal:collaboration>\n')
+f_xml_authors.write('\t</cal:collaborations>\n\n')
 
+# institution info
+f_xml_authors.write('\t<cal:organizations>\n')
+for aff in sorted_institutes:
+  f_xml_authors.write('\t\t<foaf:Organization id="a%d">\n' % institute_numbers[aff])
+  f_xml_authors.write('\t\t\t<foaf:name>%s</foaf:name>\n' % institutes[aff][1])
+  f_xml_authors.write('\t\t</foaf:Organization>\n')
+f_xml_authors.write('\t</cal:organizations>\n\n')
 
+# author info
+f_xml_authors.write('\t<cal:authors>\n')
+for author in authors:
+  f_xml_authors.write('\t\t<foaf:Person>\n')
+  f_xml_authors.write('\t\t\t<foaf:familyName>%s</foaf:familyName>\n' % author[0].split('. ')[1])
+  f_xml_authors.write('\t\t\t<cal:authorNamePaper>%s</cal:authorNamePaper>\n' % author[0])
+  f_xml_authors.write('\t\t\t<cal:authorNamePaperGiven>%s</cal:authorNamePaperGiven>\n' % author[0].split(' ')[0])
+  f_xml_authors.write('\t\t\t<cal:authorNamePaperFamily>%s</cal:authorNamePaperFamily>\n' % author[0].split('. ')[1])
+  f_xml_authors.write('\t\t\t<cal:authorCollaboration collaborationid="ara"/>\n')
+  f_xml_authors.write('\t\t\t<cal:authorAffiliations>\n')
+  for aff in author[1]:
+    f_xml_authors.write('\t\t\t\t<cal:authorAffiliation organizationid="a%d"/>\n' % institute_numbers[aff])
+  f_xml_authors.write('\t\t\t</cal:authorAffiliations>\n')
+  if len(author[2]) > 0:
+    f_xml_authors.write('\t\t\t<cal:authorids>\n')
+    for key in author[2]:
+      if key =='orcid':
+        f_xml_authors.write('\t\t\t\t<cal:authorid source="ORCID">%s</cal:authorid>\n' % author[2]['orcid'])
+      if key == 'inspireid':
+        f_xml_authors.write('\t\t\t\t<cal:authorid source="INSPIRE">%s</cal:authorid>\n' % author[2]['inspireid'])
+    f_xml_authors.write('\t\t\t</cal:authorids>\n')
+  f_xml_authors.write('\t\t</foaf:Person>\n')
+f_xml_authors.write('\t</cal:authors>\n')
 
-
-
+# end of xml file
+f_xml_authors.write('</collaborationauthorlist>')
+f_xml_authors.close()
 
 
 

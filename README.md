@@ -48,9 +48,7 @@ Output is generated in several formats:
   - `ara_icrc_authors.tex` for use with the 2019 ICRC authorlist format. 
   - `ara_authors.html` for web display, this is used to generate an index.html that we can use for gh-pages (you should commit this if it changed!) 
   - `ara_authors.txt` for text
-
-TODO:
-  - `authors.xml` format for arxiv/inspirehep
+  - `ara_authors.xml` format for arxiv/inspirehep -- NOTE: the xml file generated uses a placehold publicationReference which should be changed by hand
 
 
 
