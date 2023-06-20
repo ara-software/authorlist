@@ -20,13 +20,6 @@ J.J. Beatty:
   orcid: 0000-0003-0481-4952
   email: beatty.85@osu.edu
 
-M. Beheler-Amass:
-  authlistname: M. Beheler-Amass
-  affiliations: 
-    - UW
-  orcid: 0000-0003-4654-3097
-  email: maggie.beheler-amass@icecube.wisc.edu
-
 D.Z. Besson:
   authlistname: D.Z. Besson
   affiliations: 
@@ -36,12 +29,12 @@ D.Z. Besson:
   email: zedlam@ku.edu
   inspireid: INSPIRE-00324734
 
-M. Beydler:
-  authlistname: M. Beydler
+A. Bishop:
+  authlistname: A. Bishop
   affiliations: 
     - UW
-  inspireid: INSPIRE-00808384
-  email: marybeth.beydler@icecube.wisc.edu
+  orcid: 0000-0002-0375-644X
+  email: abigail.bishop@wisc.edu
 
 C.C. Chen:
   authlistname: C.C. Chen
@@ -170,13 +163,6 @@ J. Hanson:
   inspireid: INSPIRE-00808348
   email: jordan.hanson@icecube.wisc.edu
 
-K. Hanson:
-  authlistname: K. Hanson
-  affiliations: 
-    - UW
-  inspireid: 0000-0002-4647-9382
-  email: kael.hanson@icecube.wisc.edu
-
 N. Harty:
   authlistname: N. Harty
   affiliations:
@@ -198,13 +184,6 @@ K.D. Hoffman:
     - UMD
   inspireid: INSPIRE-00090587
   email: kara@umd.eduß
-
-B. Hokanson-Fasig:
-  authlistname: B. Hokanson-Fasig
-  affiliations: 
-    - UW
-  inspireid: INSPIRE-00821286
-  email: benjamin.hokanson-fasig@icecube.wisc.edu
 
 E. Hong:
   authlistname: E. Hong
@@ -266,13 +245,6 @@ J.L. Kelley:
   orcid: 0000-0002-0846-4542
   inspireid: INSPIRE-00325390
   email: jkelley@icecube.wisc.edu
-
-R. Khandelwal:
-  authlistname: R. Khandelwal
-  affiliations: 
-    - UW
-  inspireid: INSPIRE-00808562
-  email: rishabh.khandelwal@icecube.wisc.edu
 
 K.-C. Kim:
   authlistname: K.-C. Kim
@@ -340,13 +312,6 @@ U.A. Latif:
   orcid: 0000-0002-7609-1266
   email: latif.uzair@gmail.com
 
-A. Laundrie:
-  authlistname: A. Laundrie
-  affiliations: 
-    - UW
-  inspireid: INSPIRE-00669962
-  email: andrew.laundrie@icecube.wisc.edu
-
 C.-J. Li:
   authlistname: C.-J. Li
   affiliations: 
@@ -358,14 +323,6 @@ T.-C. Liu:
     - NTU
   inspireid: INSPIRE-00407520
   email: tcl@nycu.edu.tw
-
-M.-Y. Lu:
-  authlistname: M.-Y. Lu
-  affiliations: 
-    - UW
-  orcid: 0000-0002-3798-9284
-  inspireid: INSPIRE-00557913
-  email: mlu27@icecube.wisc.edu
 
 B. Madison:
   authlistname: B. Madison
@@ -380,13 +337,6 @@ K. Mase:
     - Chiba
   inspireid: INSPIRE-00325600
   email: mase@hepburn.s.chiba-u.ac.jp
-
-T. Meures:
-  authlistname: T. Meures
-  affiliations: 
-    - UW
-  inspireid: INSPIRE-00325649
-  email: thomas.meures@icecube.wisc.edu
 
 M.S. Muzio:
   authlistname: M.S. Muzio
@@ -441,13 +391,6 @@ E. Oberla:
   orcid: 0000-0001-8344-7999
   email: ejo@uchicago.edu
 
-A. OMurchadha:
-  authlistname: A. OMurchadha
-  affiliations: 
-    - UW
-  inspireid: INSPIRE-00263446
-  email: aongus.omurchadha@gmail.com
-
 J. Osborn:
   authlistname: J. Osborn
   affiliations: 
@@ -482,13 +425,6 @@ J. Roth:
     - UD
   inspireid: INSPIRE-00808447
   email: roth@udel.edu
-
-P. Sandstrom:
-  authlistname: P. Sandstrom
-  affiliations: 
-    - UW
-  inspireid: INSPIRE-00479848
-  email: sandstrom@icecube.wisc.edu
 
 D. Seckel:
   authlistname: D. Seckel
