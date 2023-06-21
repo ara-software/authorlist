@@ -1,3 +1,10 @@
+S. Ali:
+  authlistname: S. Ali
+  affiliations:
+    - KU
+  orcid: 0009-0001-2444-4162
+  email: shoukat@ku.edu
+
 P. Allison:
   authlistname: P. Allison
   affiliations: 
@@ -24,7 +31,6 @@ D.Z. Besson:
   authlistname: D.Z. Besson
   affiliations: 
     - KU
-    - Moscow
   orcid: 0000-0001-6733-963X
   email: zedlam@ku.edu
   inspireid: INSPIRE-00324734
@@ -82,6 +88,13 @@ A. Connolly:
     - OSU
   orcid: 0000-0003-0049-5448
   email: connolly@physics.osu.edu
+
+K. Couberly:
+  authlistname: K. Couberly
+  affiliations:
+    - KU
+  orcid: 0000-0001-5311-3648
+  email: kcouberly@ku.edu
 
 L. Cremonesi:
   authlistname: L. Cremonesi
@@ -155,6 +168,13 @@ R. Gaior:
     - Chiba
   inspireid: INSPIRE-00281794
   email: gaior@hepburn.s.chiba-u.ac.jp
+
+P. Giri:
+  authlistname: P. Giri
+  affiliations:
+    - UNL
+  orcid: 0009-0004-0210-9373
+  email: pgiri4@huskers.unl.edu
 
 J. Hanson:
   authlistname: J. Hanson
@@ -307,7 +327,6 @@ H. Landsman:
 U.A. Latif:
   authlistname: U.A. Latif
   affiliations: 
-    - KU
     - VUB
   orcid: 0000-0002-7609-1266
   email: latif.uzair@gmail.com
@@ -317,19 +336,19 @@ C.-J. Li:
   affiliations: 
     - NTU
 
+C.H. Liu:
+  authlistname: C.H. Liu
+  affiliations:
+    - UNL
+  orcid: 0009-0003-0922-9661
+  email: martin01021207@huskers.unl.edu
+
 T.-C. Liu:
   authlistname: T.-C. Liu
   affiliations: 
     - NTU
   inspireid: INSPIRE-00407520
   email: tcl@nycu.edu.tw
-
-B. Madison:
-  authlistname: B. Madison
-  affiliations: 
-    - KU
-  inspireid: INSPIRE-00808516
-  email: brendon.madison@icecube.wisc.edu
 
 K. Mase:
   authlistname: K. Mase
@@ -371,10 +390,9 @@ G. Nir:
 A. Novikov:
   authlistname: A. Novikov
   affiliations: 
-    - KU
-    - Moscow
+    - UD
   orcid: 0000-0002-1086-7252
-  email: alexander.novikov@ku.edu
+  email: novikov@udel.edu 
 
 A. Nozdrina:
   authlistname: A. Nozdrina
@@ -390,13 +408,6 @@ E. Oberla:
     - UC
   orcid: 0000-0001-8344-7999
   email: ejo@uchicago.edu
-
-J. Osborn:
-  authlistname: J. Osborn
-  affiliations: 
-    - UNL
-  orcid: 0000-0002-2924-0863
-  email: josborn@huskers.unl.edu
 
 Y. Pan:
   authlistname: Y. Pan
@@ -433,19 +444,19 @@ D. Seckel:
   inspireid: INSPIRE-00326040
   email: dseckel@udel.edu
 
+M.F.H. Seikh:
+  authlistname: M.F.H. Seikh
+  affiliations:
+    - KU
+  orcid: 0000-0002-4464-7354
+  email: fulhossain@ku.edu 
+
 Y.-S. Shiao:
   authlistname: Y.-S. Shiao
   affiliations: 
     - NTU
   orcid: 0000-0001-5275-0717
   email: jshiao@phys.ntu.edu.tw
-
-A. Shultz:
-  authlistname: A. Shultz
-  affiliations: 
-    - KU
-  inspireid: INSPIRE-00808528
-  email: andjshultz@gmail.com
 
 D. Smith:
   authlistname: D. Smith
