@@ -295,14 +295,6 @@ R. Krebs:
   inspireid: INSPIRE-00808367
   email: rjk5416@psu.edu
 
-Y. Ku:
-  authlistname: Y. Ku
-  affiliations: 
-    - PSUigc
-    - PSUphys
-  inspireid: 0000-0002-9119-0991
-  email: yzk5303@psu.edu
-
 C.Y. Kuo:
   authlistname: C.Y. Kuo
   affiliations: 
@@ -533,7 +525,6 @@ S.A. Wissel:
     - PSUigc
     - PSUphys
     - PSUast
-    - CalPoly
   orcid: 0000-0003-0569-6978
   email: szw5718@psu.edu
 
