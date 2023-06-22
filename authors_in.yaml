@@ -42,18 +42,6 @@ A. Bishop:
   orcid: 0000-0002-0375-644X
   email: abigail.bishop@wisc.edu
 
-C.C. Chen:
-  authlistname: C.C. Chen
-  affiliations: 
-    - NTU
-
-C.H. Chen:
-  authlistname: C.H. Chen
-  affiliations: 
-    - NTU
-  inspireid: INSPIRE-00808591
-  email: chchen@phys.ntu.edu.tw
-
 P. Chen:
   authlistname: P. Chen
   affiliations: 
@@ -198,18 +186,6 @@ K.D. Hoffman:
   inspireid: INSPIRE-00090587
   email: kara@umd.eduß
 
-S.Y. Hsu:
-  authlistname: S.Y. Hsu
-  affiliations: 
-    - NTU
-  inspireid: INSPIRE-00808466
-  email: shih-ying.hsu@icecube.wisc.edu
-
-L. Hu:
-  authlistname: L. Hu
-  affiliations: 
-    - NTU
-
 J.J. Huang:
   authlistname: J.J. Huang
   affiliations: 
@@ -302,11 +278,6 @@ U.A. Latif:
   orcid: 0000-0002-7609-1266
   email: latif.uzair@gmail.com
 
-C.-J. Li:
-  authlistname: C.-J. Li
-  affiliations: 
-    - NTU
-
 C.H. Liu:
   authlistname: C.H. Liu
   affiliations:
@@ -340,7 +311,7 @@ M.S. Muzio:
 J. Nam:
   authlistname: J. Nam
   affiliations: 
-    - Chiba
+    - NTU
   inspireid: INSPIRE-00325699
   email: jwnam@phys.ntu.edu.tw
 
@@ -418,6 +389,7 @@ M.F.H. Seikh:
 Y.-S. Shiao:
   authlistname: Y.-S. Shiao
   affiliations: 
+    - NDL
     - NTU
   orcid: 0000-0001-5275-0717
   email: jshiao@phys.ntu.edu.tw
@@ -483,13 +455,6 @@ S.-H. Wang:
     - NTU
   orcid: 0000-0002-0060-7975
   email: wsh4180@gmail.com
-
-Y.H. Wang:
-  authlistname: Y.H. Wang
-  affiliations:
-    - NTU
-  inspireid: INSPIRE-00808629
-  email: wang910654@gmail.com
 
 S.A. Wissel:
   authlistname: S.A. Wissel

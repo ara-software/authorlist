@@ -18,6 +18,11 @@ MSU:
   shortid: Michigan State University
   address: Dept. of Physics and Astronomy, Michigan State University, East Lansing, Michigan 48824
 
+NDL:
+  instituteid: NDL
+  shortid: National Nano Device Laboratories
+  address: Hsinchu 300, Taiwan
+
 NTU:
   instituteid: NTU
   shortid: National Taiwan University
