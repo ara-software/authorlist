@@ -285,10 +285,11 @@ C.H. Liu:
   orcid: 0009-0003-0922-9661
   email: martin01021207@huskers.unl.edu
 
-T.-C. Liu:
-  authlistname: T.-C. Liu
+T.C. Liu:
+  authlistname: T.C. Liu
   affiliations: 
     - NTU
+    - NPU
   inspireid: INSPIRE-00407520
   email: tcl@nycu.edu.tw
 
@@ -389,8 +390,8 @@ M.F.H. Seikh:
 Y.-S. Shiao:
   authlistname: Y.-S. Shiao
   affiliations: 
-    - NDL
     - NTU
+    - NDL
   orcid: 0000-0001-5275-0717
   email: jshiao@phys.ntu.edu.tw
 

@@ -28,6 +28,11 @@ NTU:
   shortid: National Taiwan University
   address: Dept. of Physics, Grad. Inst. of Astrophys., Leung Center for Cosmology and Particle Astrophysics, National Taiwan University, Taipei, Taiwan
 
+NPU:
+  instituteid: NPU
+  shortid: National Pingtung University
+  address: Department of Applied Physics, National Pingtung University, Pingtung City, Pingtung County 900393, Taiwan
+
 OSU:
   instituteid: OSU
   shortid: The Ohio State University
