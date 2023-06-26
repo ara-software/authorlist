@@ -31,7 +31,12 @@ NTU:
 NPU:
   instituteid: NPU
   shortid: National Pingtung University
-  address: Department of Applied Physics, National Pingtung University, Pingtung City, Pingtung County 900393, Taiwan
+  address: Dept. of Applied Physics, National Pingtung University, Pingtung City, Pingtung County 900393, Taiwan
+
+NUU:
+  instituteid: NUU
+  shortid: National United University
+  address: Dept. of Energy Engineering, National United University, Miaoli, Taiwan
 
 OSU:
   instituteid: OSU
