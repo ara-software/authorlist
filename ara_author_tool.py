@@ -286,40 +286,78 @@ f_xml_authors.write('<!ELEMENT cal:publicationReference ( #PCDATA ) >\n')
 
 f_xml_authors.write('<!-- **************** COLLABORATIONS ********************* -->\n')
 f_xml_authors.write('\t<!ELEMENT cal:collaborations ( cal:collaboration+ ) >\n')
-f_xml_authors.write('\t<!ELEMENT cal:collaboration ( foaf:name, cal:experimentNumber?, cal:group? ) >\n')
-f_xml_authors.write('\t<!ATTLIST cal:collaboration\n')
-f_xml_authors.write('\tid ID #REQUIRED\n')
-f_xml_authors.write('\t>\n\n')
+f_xml_authors.write('\t\t<!ELEMENT cal:collaboration ( foaf:name, cal:experimentNumber?, cal:group? ) >\n')
+f_xml_authors.write('\t\t<!ATTLIST cal:collaboration\n')
+f_xml_authors.write('\t\t\tid ID #REQUIRED\n')
+f_xml_authors.write('\t\t>\n\n')
 
 f_xml_authors.write('\t<!ELEMENT cal:experimentNumber ( #PCDATA ) >\n\n')
 
 f_xml_authors.write('\t<!ELEMENT cal:group ( #PCDATA ) >\n')
-f_xml_authors.write('\<!ATTLIST cal:group\n')
-f_xml_authors.write('\twith IDREF #IMPLIED\n')
-f_xml_authors.write('\t>\n\n')
+f_xml_authors.write('\t\t<!ATTLIST cal:group\n')
+f_xml_authors.write('\t\twith IDREF #IMPLIED\n')
+f_xml_authors.write('\t\t>\n\n')
 
 f_xml_authors.write('<!-- ORGANIZATIONS -->\n')
-f_xml_authors.write('<!ELEMENT cal:organizations ( foaf:Organization+ ) >\n')
-    <!ELEMENT foaf:Organization ( cal:orgDomain?, foaf:name, cal:orgName*, cal:orgStatus*, cal:orgAddress?, cal:group? ) >
-    <!ATTLIST foaf:Organization
-          id ID #REQUIRED
-    >
+f_xml_authors.write('\t<!ELEMENT cal:organizations ( foaf:Organization+ ) >\n')
+f_xml_authors.write('\t\t<!ELEMENT foaf:Organization ( cal:orgDomain?, foaf:name, cal:orgName*, cal:orgStatus*, cal:orgAddress?, cal:group? ) >\n')
+f_xml_authors.write('\t\t<!ATTLIST foaf:Organization\n')
+f_xml_authors.write('\t\t\tid ID #REQUIRED\n')
+f_xml_authors.write('\t\t>\n\n')
 
-    <!ELEMENT cal:orgAddress ( #PCDATA ) >
-    <!ELEMENT cal:orgDomain ( #PCDATA ) >
+f_xml_authors.write('\t\t<!ELEMENT cal:orgAddress ( #PCDATA ) >\n')
+f_xml_authors.write('\t\t<!ELEMENT cal:orgDomain ( #PCDATA ) >\n\n')
 
-    <!ELEMENT cal:orgName ( #PCDATA ) >
-    <!ATTLIST cal:orgName
-          source CDATA "INTERNAL"
-    >
+f_xml_authors.write('\t\t<!ELEMENT cal:orgName ( #PCDATA ) >\n')
+f_xml_authors.write('\t\t<!ATTLIST cal:orgName\n')
+f_xml_authors.write('\t\t\tsource CDATA "INTERNAL"\n')
+f_xml_authors.write('\t\t>\n\n')
 
-    <!ELEMENT cal:orgStatus ( #PCDATA ) >
-    <!ATTLIST cal:orgStatus
-          collaborationid IDREF #IMPLIED
-    >
+f_xml_authors.write('\t\t<!ELEMENT cal:orgStatus ( #PCDATA ) >\n')
+f_xml_authors.write('\t\t<!ATTLIST cal:orgStatus\n')
+f_xml_authors.write('\t\t\tcollaborationid IDREF #IMPLIED\n')
+f_xml_authors.write('\t\t>\n\n')
+
+f_xml_authors.write('<!-- AUTHORS -->\n')
+f_xml_authors.write('<!ELEMENT cal:authors ( foaf:Person+ ) >\n')
+f_xml_authors.write('\t<!ELEMENT foaf:Person ( foaf:name?, cal:authorNameNative?, foaf:givenName?, foaf:familyName, cal:authorSuffix?, cal:authorStatus?, cal:authorNamePaper, cal:authorNamePaperGiven?, cal:authorNamePaperFamily?, cal:authorCollaboration?, cal:authorAffiliations?, cal:authorids?, cal:authorFunding? ) >\n\n')
+
+f_xml_authors.write('\t<!ELEMENT foaf:familyName ( #PCDATA ) >\n')
+f_xml_authors.write('\t<!ELEMENT foaf:givenName ( #PCDATA ) >\n')
+f_xml_authors.write('\t<!ELEMENT foaf:name ( #PCDATA ) >\n\n')
+
+f_xml_authors.write('\t<!ELEMENT cal:authorNameNative ( #PCDATA ) >\n')
+f_xml_authors.write('\t<!ELEMENT cal:authorNamePaper ( #PCDATA ) >\n')
+f_xml_authors.write('\t<!ELEMENT cal:authorNamePaperGiven ( #PCDATA ) >\n')
+f_xml_authors.write('\t<!ELEMENT cal:authorNamePaperFamily ( #PCDATA ) >\n')
+f_xml_authors.write('\t<!ELEMENT cal:authorStatus ( #PCDATA ) >\n')
+f_xml_authors.write('\t<!ELEMENT cal:authorSuffix ( #PCDATA ) >\n\n')
+
+f_xml_authors.write('\t<!ELEMENT cal:authorCollaboration EMPTY >\n')
+f_xml_authors.write('\t<!ATTLIST cal:authorCollaboration\n')
+f_xml_authors.write('\t\tcollaborationid IDREF "c1"\n')
+f_xml_authors.write('\t\tposition CDATA #IMPLIED\n')
+f_xml_authors.write('\t>\n\n')
+
+f_xml_authors.write('\t<!ELEMENT cal:authorAffiliations ( cal:authorAffiliation* ) >\n')
+f_xml_authors.write('\t<!ELEMENT cal:authorAffiliation EMPTY >\n')
+f_xml_authors.write('\t<!ATTLIST cal:authorAffiliation\n')
+f_xml_authors.write('\t\torganizationid IDREF #REQUIRED\n')
+f_xml_authors.write('\t\tconnection CDATA "Affiliated with"\n')
+f_xml_authors.write('\t>\n\n')
+
+f_xml_authors.write('\t<!ELEMENT cal:authorids ( cal:authorid* ) >\n')
+f_xml_authors.write('\t<!ELEMENT cal:authorid ( #PCDATA ) >\n')
+f_xml_authors.write('\t<!ATTLIST cal:authorid\n')
+f_xml_authors.write('\t\tsource CDATA #REQUIRED\n')
+f_xml_authors.write('\t>\n')
+f_xml_authors.write('\t<!ELEMENT cal:authorFunding ( #PCDATA ) >\n\n')
 
 
-
+f_xml_authors.write('\n]>\n')
+f_xml_authors.write('<!--\n')
+f_xml_authors.write('\tARA author list for INSPIRE.\n')
+f_xml_authors.write('-->\n')
 
 f_xml_authors.write('<collaborationauthorlist\n')
 f_xml_authors.write('\txmlns:foaf="http://xmlns.com/foaf/0.1/"\n')
@@ -332,7 +370,7 @@ f_xml_authors.write('\t<cal:publicationReference>ENTER ARXIV URL HERE</cal:publi
 
 # collaboration info
 f_xml_authors.write('\t<cal:collaborations>\n')
-f_xml_authors.write('\t\t<cal:collaboration id="ara">\n')
+f_xml_authors.write('\t\t<cal:collaboration id="c1">\n')
 f_xml_authors.write('\t\t\t<foaf:name>ARA</foaf:name>\n')
 f_xml_authors.write('\t\t</cal:collaboration>\n')
 f_xml_authors.write('\t</cal:collaborations>\n\n')
@@ -341,7 +379,11 @@ f_xml_authors.write('\t</cal:collaborations>\n\n')
 f_xml_authors.write('\t<cal:organizations>\n')
 for aff in sorted_institutes:
   f_xml_authors.write('\t\t<foaf:Organization id="a%d">\n' % institute_numbers[aff])
+  f_xml_authors.write('\t\t\t<cal:orgDomain>http://</cal:orgDomain>\n')
   f_xml_authors.write('\t\t\t<foaf:name>%s</foaf:name>\n' % institutes[aff][1])
+  f_xml_authors.write('\t\t\t<cal:orgName source="INTERNAL">%s</cal:orgName>\n' % institutes[aff][1])
+  f_xml_authors.write('\t\t\t<cal:orgStatus collaborationid="c%d">member</cal:orgStatus>\n' % institute_numbers[aff])
+  f_xml_authors.write('\t\t\t<cal:orgAddress> %s</cal:orgAddress>\n' % institutes[aff][0])
   f_xml_authors.write('\t\t</foaf:Organization>\n')
 f_xml_authors.write('\t</cal:organizations>\n\n')
 
@@ -350,14 +392,18 @@ f_xml_authors.write('\t<cal:authors>\n')
 for author in authors:
   f_xml_authors.write('\t\t<foaf:Person>\n')
   f_xml_authors.write('\t\t\t<foaf:name>%s</foaf:name>\n' % author[0])
+  f_xml_authors.write('\t\t\t<cal:authorNameNative/>\n')
+  f_xml_authors.write('\t\t\t<foaf:givenName>%s</foaf:givenName>\n' % author[0].split(' ')[0])
   f_xml_authors.write('\t\t\t<foaf:familyName>%s</foaf:familyName>\n' % author[0].split('. ')[1])
+  f_xml_authors.write('\t\t\t<cal:authorSuffix/>\n')
+  f_xml_authors.write('\t\t\t<cal:authorStatus/>\n')
   f_xml_authors.write('\t\t\t<cal:authorNamePaper>%s</cal:authorNamePaper>\n' % author[0])
   f_xml_authors.write('\t\t\t<cal:authorNamePaperGiven>%s</cal:authorNamePaperGiven>\n' % author[0].split(' ')[0])
   f_xml_authors.write('\t\t\t<cal:authorNamePaperFamily>%s</cal:authorNamePaperFamily>\n' % author[0].split('. ')[1])
-  f_xml_authors.write('\t\t\t<cal:authorCollaboration collaborationid="ara"/>\n')
+  f_xml_authors.write('\t\t\t<cal:authorCollaboration collaborationid="c1" position=""/>\n')
   f_xml_authors.write('\t\t\t<cal:authorAffiliations>\n')
   for aff in author[1]:
-    f_xml_authors.write('\t\t\t\t<cal:authorAffiliation organizationid="a%d"/>\n' % institute_numbers[aff])
+    f_xml_authors.write('\t\t\t\t<cal:authorAffiliation organizationid="a%d" connection=""/>\n' % institute_numbers[aff])
   f_xml_authors.write('\t\t\t</cal:authorAffiliations>\n')
   if len(author[2]) > 0:
     f_xml_authors.write('\t\t\t<cal:authorids>\n')
