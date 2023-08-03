@@ -272,8 +272,54 @@ f_icrc_authors.close()
 f_xml_authors = open(prefix + "authors.xml","w")
 
 # initial header info (DO NOT CHANGE)
-f_xml_authors.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-f_xml_authors.write('<!DOCTYPE collaborationauthorlist SYSTEM "author.dtd">\n')
+f_xml_authors.write('<?xml version="1.0" encoding="UTF-8"?>\n\n')
+
+f_xml_authors.write('<!DOCTYPE collaborationauthorlist [\n')
+f_xml_authors.write('<!ELEMENT collaborationauthorlist ( cal:creationDate, cal:publicationReference, cal:collaborations, cal:organizations, cal:authors ) >\n')
+f_xml_authors.write('<!ATTLIST collaborationauthorlist\n')
+f_xml_authors.write('\txmlns:foaf CDATA #FIXED "http://xmlns.com/foaf/0.1/"\n')
+f_xml_authors.write('\txmlns:cal  CDATA #FIXED "http://inspirehep.net/info/HepNames/tools/authors_xml/"\n')
+f_xml_authors.write('>\n\n')
+
+f_xml_authors.write('<!ELEMENT cal:creationDate ( #PCDATA ) >\n')
+f_xml_authors.write('<!ELEMENT cal:publicationReference ( #PCDATA ) >\n')
+
+f_xml_authors.write('<!-- **************** COLLABORATIONS ********************* -->\n')
+f_xml_authors.write('\t<!ELEMENT cal:collaborations ( cal:collaboration+ ) >\n')
+f_xml_authors.write('\t<!ELEMENT cal:collaboration ( foaf:name, cal:experimentNumber?, cal:group? ) >\n')
+f_xml_authors.write('\t<!ATTLIST cal:collaboration\n')
+f_xml_authors.write('\tid ID #REQUIRED\n')
+f_xml_authors.write('\t>\n\n')
+
+f_xml_authors.write('\t<!ELEMENT cal:experimentNumber ( #PCDATA ) >\n\n')
+
+f_xml_authors.write('\t<!ELEMENT cal:group ( #PCDATA ) >\n')
+f_xml_authors.write('\<!ATTLIST cal:group\n')
+f_xml_authors.write('\twith IDREF #IMPLIED\n')
+f_xml_authors.write('\t>\n\n')
+
+f_xml_authors.write('<!-- ORGANIZATIONS -->\n')
+f_xml_authors.write('<!ELEMENT cal:organizations ( foaf:Organization+ ) >\n')
+    <!ELEMENT foaf:Organization ( cal:orgDomain?, foaf:name, cal:orgName*, cal:orgStatus*, cal:orgAddress?, cal:group? ) >
+    <!ATTLIST foaf:Organization
+          id ID #REQUIRED
+    >
+
+    <!ELEMENT cal:orgAddress ( #PCDATA ) >
+    <!ELEMENT cal:orgDomain ( #PCDATA ) >
+
+    <!ELEMENT cal:orgName ( #PCDATA ) >
+    <!ATTLIST cal:orgName
+          source CDATA "INTERNAL"
+    >
+
+    <!ELEMENT cal:orgStatus ( #PCDATA ) >
+    <!ATTLIST cal:orgStatus
+          collaborationid IDREF #IMPLIED
+    >
+
+
+
 
 f_xml_authors.write('<collaborationauthorlist\n')
 f_xml_authors.write('\txmlns:foaf="http://xmlns.com/foaf/0.1/"\n')
@@ -303,6 +349,7 @@ f_xml_authors.write('\t</cal:organizations>\n\n')
 f_xml_authors.write('\t<cal:authors>\n')
 for author in authors:
   f_xml_authors.write('\t\t<foaf:Person>\n')
+  f_xml_authors.write('\t\t\t<foaf:name>%s</foaf:name>\n' % author[0])
   f_xml_authors.write('\t\t\t<foaf:familyName>%s</foaf:familyName>\n' % author[0].split('. ')[1])
   f_xml_authors.write('\t\t\t<cal:authorNamePaper>%s</cal:authorNamePaper>\n' % author[0])
   f_xml_authors.write('\t\t\t<cal:authorNamePaperGiven>%s</cal:authorNamePaperGiven>\n' % author[0].split(' ')[0])
