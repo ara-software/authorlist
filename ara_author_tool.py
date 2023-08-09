@@ -382,7 +382,7 @@ for aff in sorted_institutes:
   f_xml_authors.write('\t\t\t<cal:orgDomain>http://</cal:orgDomain>\n')
   f_xml_authors.write('\t\t\t<foaf:name>%s</foaf:name>\n' % institutes[aff][1])
   f_xml_authors.write('\t\t\t<cal:orgName source="INTERNAL">%s</cal:orgName>\n' % institutes[aff][1])
-  f_xml_authors.write('\t\t\t<cal:orgStatus collaborationid="c%d">member</cal:orgStatus>\n' % institute_numbers[aff])
+  f_xml_authors.write('\t\t\t<cal:orgStatus collaborationid="c1">member</cal:orgStatus>\n')
   f_xml_authors.write('\t\t\t<cal:orgAddress> %s</cal:orgAddress>\n' % institutes[aff][0])
   f_xml_authors.write('\t\t</foaf:Organization>\n')
 f_xml_authors.write('\t</cal:organizations>\n\n')
