@@ -371,7 +371,7 @@ f_xml_authors.write('\t<cal:publicationReference>ENTER ARXIV URL HERE</cal:publi
 # collaboration info
 f_xml_authors.write('\t<cal:collaborations>\n')
 f_xml_authors.write('\t\t<cal:collaboration id="c1">\n')
-f_xml_authors.write('\t\t\t<foaf:name>ARA</foaf:name>\n')
+f_xml_authors.write('\t\t\t<foaf:name>ARA Collaboration</foaf:name>\n')
 f_xml_authors.write('\t\t</cal:collaboration>\n')
 f_xml_authors.write('\t</cal:collaborations>\n\n')
 
