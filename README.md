@@ -26,7 +26,7 @@ C. Deaconu:
 ```
 
 If the orcid of the author is known, it can also be added. Currently the only
-supported fields are `authlistname`, `affiliations`, and `orcid`.
+supported fields are `authlistname`, `affiliations`, `orcid`, `inspireid`, and `comments`.
 An author can have more than one affiliation; for example:
 
 ```yaml
@@ -38,6 +38,16 @@ D.Z. Besson:
   orcid: 0000-0001-6733-963X
 ```
 
+Multiple comments, including author status, can be added; for example:
+```yaml
+G. Askaryan:
+  authlistname: G. Askaryan
+  affiliations:
+    - LPI
+  comments:
+    - Deceased
+    - Not affiliated with the ARA Collaboration
+```
 
 
 Output is generated in several formats: 

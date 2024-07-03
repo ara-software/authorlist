@@ -60,6 +60,14 @@ for inst in parsed_finst:
 authors = [] 
 sorted_institutes = [] 
 institute_numbers = {}
+comment_numbers = {}
+sorted_comments = []
+comment_symbols = ['\u2020', '\u2021', '\u000B6']
+comment_symbols_tex = ['\\dagger', '\\ddagger', '\\P'] # mathmode latex version of the unicode symbols to avoid needing unicode support
+
+if(len(comment_symbols) != len(comment_symbols_tex)):
+  print("ERROR: Symbols for comments are not provided in both unicode and latex. Please provide equal number of symbols for both.") 
+  sys.exit(1)
 
 fauth = open('authors_in.yaml')
 parsed_fauth = yaml.safe_load(fauth)
@@ -79,7 +87,18 @@ for author in parsed_fauth:
     authorids['orcid'] = parsed_fauth[author]['orcid']
   if 'inspireid' in parsed_fauth[author]:
     authorids['inspireid'] = parsed_fauth[author]['inspireid']
-  authors.append((authlistname,affiliations,authorids))     
+  comments = []
+  if 'comments' in parsed_fauth[author]:
+    for authorcomment in parsed_fauth[author]['comments']:
+      comments.append(authorcomment)
+      if authorcomment not in sorted_comments:
+        sorted_comments.append(authorcomment)
+        comment_numbers[authorcomment] = len(sorted_comments)-1 # 0-indexed
+        if len(comment_numbers) > len(comment_symbols):
+          print("ERROR: There are more unique comments than unique comment symbols! Please add more symbols before running.")
+          sys.exit(1)
+        
+  authors.append((authlistname,affiliations,authorids,comments))     
 
 
 # authors.txt 
@@ -96,11 +115,17 @@ for author in authors:
   for aff in author[1]:
     f_authors_txt.write("[%d]" % (institute_numbers[aff]) ); 
 
+  for comment in author[3]:
+    markerid = comment_numbers[comment]
+    f_authors_txt.write("[%s]" % comment_symbols[markerid])
+
   first = False
 
 f_authors_txt.write("\n\n"); 
 for i in range(len(sorted_institutes)): 
   f_authors_txt.write("%d: %s\n"%( i+1, institutes[sorted_institutes[i]][0])) 
+for i in range(len(sorted_comments)):
+  f_authors_txt.write("%s: %s\n"%( comment_symbols[i], sorted_comments[i])) 
 
 
 f_authors_txt.close()
@@ -126,6 +151,11 @@ for author in authors:
     f_authors_html.write("<a href='#%s'>%d</a>" % (aff, institute_numbers[aff]) ); 
 
     first_aff = False 
+  
+  for comment in author[3]:
+    markerid = comment_numbers[comment];
+    f_authors_html.write(","); 
+    f_authors_html.write("<a href='#Comment %d'>%s</a>" % (markerid, comment_symbols[markerid]));
   f_authors_html.write("</sup>"); 
 
   first = False
@@ -134,6 +164,8 @@ f_authors_html.write("<br>(<b>%s Collaboration</b>)\n" % (collaboration));
 f_authors_html.write("</p>\n\n"); 
 for i in range(len(sorted_institutes)): 
   f_authors_html.write("<br> <a name='%s'\\> <sup>%d</sup> %s\n"%(sorted_institutes[i],  i+1, html_escape(institutes[sorted_institutes[i]][0]))) 
+for i in range(len(sorted_comments)):
+  f_authors_html.write("<br> <a name='Comment %d'\\> <sup>%s</sup> %s\n"%(comment_numbers[sorted_comments[i]], comment_symbols[i], html_escape(sorted_comments[i]))) 
 
 
 f_authors_html.close()
@@ -147,6 +179,9 @@ f_revtex_authors.write("%% \\input this file in main body (make sure you also do
 for author in authors: 
   name = author[0].replace(" ","~")
   f_revtex_authors.write(" \\author{%s}" % (name)) 
+  if author[3] is not None:
+    for comment in author[3]:
+      f_revtex_authors.write("\\comment%s" % chr(ord('A')+comment_numbers[comment]))
   if author[1] is not None: 
     for aff in author[1]: 
       f_revtex_authors.write("\\at%s" % (aff)) 
@@ -165,6 +200,9 @@ f_revtex_institutes.write("%% \\input this file in the preamble (make sure you a
 for key in sorted_institutes: 
   addr = tex_escape(institutes[key][0]) ; 
   f_revtex_institutes.write("\\newcommand{\\at%s}{\\affiliation{%s}}\n" % (key, addr)); 
+for i in range(len(sorted_comments)):
+  addr = tex_escape(sorted_comments[i]) ;
+  f_revtex_institutes.write("\\newcommand{\\comment%s}{\\altaffilation{%s}}\n"%(chr(ord('A')+i), addr)); 
 
 f_revtex_institutes.close()
 
@@ -182,6 +220,10 @@ for key in sorted_institutes:
   num = institute_numbers[key]; 
   addr = tex_escape(institutes[key][0]) ; 
   f_elsarticle_authors.write("\\address[%d]{%s}\n" % (num, addr)); 
+for key in sorted_comments:
+  num = comment_numbers[key];
+  addr = tex_escape(key) ;
+  f_elsarticle_authors.write("\\fntext[comment%d]{%s}\n" % (num, key));
 
 f_elsarticle_authors.write("\n\n"); 
 
@@ -192,7 +234,15 @@ for author in authors:
     if affs != "": 
       affs += ","
     affs += str(institute_numbers[aff])
-  f_elsarticle_authors.write("\\author[%s]{%s}\n" % (affs,name)) 
+  comms = ""
+  for comment in author[3]:
+    if comms != "":
+      comms += str(",comment%d" % comment_numbers[comment])
+    else:
+      comms += str("\\fnref{comment%d" % comment_numbers[comment])
+  if comms != "":
+    comms += "}" 
+  f_elsarticle_authors.write("\\author[%s]{%s%s}\n" % (affs,name,comms))
 
 f_elsarticle_authors.close()
 
@@ -217,6 +267,10 @@ for author in authors:
     if affs != "": 
       affs += ","
     affs += str(institute_numbers[aff])
+  for comment in author[3]:
+    if affs != "":
+      affs += ","
+    affs += str("%s" % comment_symbols_tex[comment_numbers[comment]])
  
   f_pos_authors.write("$^{%s}$"%(affs))
   first = False
@@ -228,6 +282,8 @@ for i in range(len(sorted_institutes)):
     # f_pos_authors.write(",\n")
   f_pos_authors.write(" $^{%d}$%s\\\\\n"%( i+1, tex_escape(institutes[sorted_institutes[i]][0])))
   first = False 
+for i in range(len(sorted_comments)):
+  f_pos_authors.write(" $^{%s}$%s\\\\\n"%( comment_symbols_tex[i], tex_escape(sorted_comments[i])))
 
 f_pos_authors.write("\n}\n"); 
 f_pos_authors.close()
@@ -235,11 +291,12 @@ f_pos_authors.close()
 
 ## ICRC authors
 f_icrc_authors = open(prefix + "icrc_authors.tex","w"); 
-f_icrc_authors.write("%% ICRC list for %s Collaboration\n\n" % (collaboration));  
+f_icrc_authors.write("%% ICRC list for %s Collaboration\n" % (collaboration));  
 
+now = datetime.datetime.now()
+f_icrc_authors.write("\\section*{Full Author List: %s Collaboration (%s)}\n\n" % (collaboration, now.strftime('%B %d, %Y')));
 
 first = True
-num_institutes = 0 
 f_icrc_authors.write("\\noindent\n")
 for author in authors: 
 
@@ -250,21 +307,27 @@ for author in authors:
   f_icrc_authors.write(name); 
 
   first_aff = True
+  affs = ""
   for aff in author[1]:
-    if not first_aff:
-      f_icrc_authors.write("\\textsuperscript{,}"); 
-    if institute_numbers[aff] > num_institutes: 
-      #f_icrc_authors.write("\\footnote[%d]{%s\label{inst%d}}" % (institute_numbers[aff], institutes[aff][0], institute_numbers[aff]))
-      f_icrc_authors.write("\\textsuperscript{%d}" % (institute_numbers[aff]))
-      num_institutes+=1 
-    else:
-      f_icrc_authors.write("\\textsuperscript{%d}" % (institute_numbers[aff]) ); 
+    if affs != "":
+      affs += ","
+    affs += str("%d" % institute_numbers[aff])
     first_aff = False
   first = False
+
+  for comment in author[3]:
+    if affs != "":
+      affs += ","
+    affs += str("$%s$" % comment_symbols_tex[comment_numbers[comment]])
+  
+  f_icrc_authors.write("\\textsuperscript{%s}" % affs)
 
 f_icrc_authors.write("\n\\\\\n\\\\\n")
 for i in range(len(sorted_institutes)): 
   f_icrc_authors.write("\\textsuperscript{%d} %s\\\\\n"%( i+1, institutes[sorted_institutes[i]][0])) 
+for i in range(len(sorted_comments)):
+  f_icrc_authors.write("\\textsuperscript{$%s$} %s\\\\\n"%( comment_symbols_tex[i], tex_escape(sorted_comments[i])))
+
 
 f_icrc_authors.close()
 
@@ -396,7 +459,10 @@ for author in authors:
   f_xml_authors.write('\t\t\t<foaf:givenName>%s</foaf:givenName>\n' % author[0].split(' ')[0])
   f_xml_authors.write('\t\t\t<foaf:familyName>%s</foaf:familyName>\n' % author[0].split('. ')[1])
   f_xml_authors.write('\t\t\t<cal:authorSuffix/>\n')
-  f_xml_authors.write('\t\t\t<cal:authorStatus/>\n')
+  if 'Deceased' in author[3]:
+    f_xml_authors.write('\t\t\t<cal:authorStatus>Deceased</cal:authorStatus>\n')
+  else:
+    f_xml_authors.write('\t\t\t<cal:authorStatus/>\n')
   f_xml_authors.write('\t\t\t<cal:authorNamePaper>%s</cal:authorNamePaper>\n' % author[0])
   f_xml_authors.write('\t\t\t<cal:authorNamePaperGiven>%s</cal:authorNamePaperGiven>\n' % author[0].split(' ')[0])
   f_xml_authors.write('\t\t\t<cal:authorNamePaperFamily>%s</cal:authorNamePaperFamily>\n' % author[0].split('. ')[1])
