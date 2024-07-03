@@ -63,13 +63,6 @@ B.A. Clark:
   orcid: 0000-0003-4089-2245
   email: baclark@umd.edu
 
-W. Clay:
-  authlistname: W. Clay
-  affiliations: 
-    - UC
-  inspireid: INSPIRE-00808501
-  email: whclay@umail.ucsb.edu
-
 A. Connolly:
   authlistname: A. Connolly
   affiliations: 
@@ -103,7 +96,7 @@ A. Cummings:
 P. Dasgupta:
   authlistname: P. Dasgupta
   affiliations:
-    - ULB
+    - OSU
   orcid: 0000-0002-9559-4803
   inspireid: INSPIRE-00808396
   email: paramita.dasgupta@ulb.be
@@ -194,13 +187,6 @@ K.D. Hoffman:
   inspireid: INSPIRE-00090587
   email: kara@umd.eduß
 
-J.J. Huang:
-  authlistname: J.J. Huang
-  affiliations: 
-    - NTU
-  inspireid: INSPIRE-00808478
-  email: njinee@hotmail.com
-
 M.-H. Huang:
   authlistname: M.-H. Huang
   affiliations: 
@@ -211,9 +197,7 @@ M.-H. Huang:
 K. Hughes:
   authlistname: K. Hughes
   affiliations: 
-    - PSUigc
-    - PSUphys
-    - PSUast
+    - OSU
   orcid: 0000-0002-4551-9581
   email: kaeli@psu.edu
 
@@ -420,12 +404,12 @@ Y.-S. Shiao:
   orcid: 0000-0001-5275-0717
   email: jshiao@phys.ntu.edu.tw
 
-D. Smith:
-  authlistname: D. Smith
-  affiliations: 
-    - UC
-  orcid: 0000-0001-6307-4072
-  email: danielsmith@uchicago.edu
+S.C. Su:
+  authlistname: S.C. Su
+  affiliations:
+    - NTU
+  inspireid: INSPIRE-00423619
+  email: jackysu822@gmail.com
 
 S. Toscano:
   authlistname: S. Toscano
