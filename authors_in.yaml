@@ -1,3 +1,10 @@
+N. Alden:
+  authlistname: N. Alden
+  affiliations:
+    - UC
+  orcid: 0009-0003-2076-6118
+  email: nalden@uchicago.edu
+
 S. Ali:
   authlistname: S. Ali
   affiliations:
@@ -471,6 +478,13 @@ S.-H. Wang:
     - NTU
   orcid: 0000-0002-0060-7975
   email: wsh4180@gmail.com
+
+P. Windischhofer:
+  authlistname: P. Windischhofer
+  affiliations:
+    - UC
+  orcid: 0000-0001-5038-1399
+  email: philipp.windischhofer@uchicago.edu 
 
 S.A. Wissel:
   authlistname: S.A. Wissel
