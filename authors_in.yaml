@@ -67,6 +67,13 @@ Y.-C. Chen:
   affiliations:
     - NTU
 
+S. Chiche:
+  authlistname: S. Chiche
+  affiliations:
+    - ULB
+  orcid: 0000-0002-2853-5862 
+  email: simon.chiche@ulb.be
+
 B.A. Clark:
   authlistname: B.A. Clark
   affiliations: 
@@ -328,7 +335,7 @@ M.S. Muzio:
     - PSUphys
     - PSUast
   orcid: 0000-0003-4615-5529
-  email: msm6428@psu.edu
+  email: muzio@wisc.edu 
 
 J. Nam:
   authlistname: J. Nam
@@ -478,6 +485,12 @@ A. Vieregg:
     - UC
   orcid: 0000-0002-4528-9886
   email: avieregg@kicp.uchicago.edu
+
+M. Vilarino Fostier:
+  authlistname: M. Vilarino Fostier
+  affiliations:
+    - ULB
+  email: marine.vilarino.fostier@gmail.com
 
 M.-Z. Wang:
   authlistname: M.-Z. Wang
