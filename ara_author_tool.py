@@ -25,8 +25,7 @@ if len(sys.argv) > 2:
 
 ## may need to do more here! 
 def tex_escape(string): 
-
-  return string.replace("&","\&")
+  return string.replace(". ", ".~").replace("&","\&")
 
 def html_escape(string):
 
