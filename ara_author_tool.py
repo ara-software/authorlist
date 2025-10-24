@@ -485,6 +485,13 @@ f_xml_authors.write('\t</cal:authors>\n')
 f_xml_authors.write('</collaborationauthorlist>')
 f_xml_authors.close()
 
+arxiv_authors = []
+for author in authors:
+    arxiv_authors += [author[0]]
+arxiv_authors = "ARA Collaboration: " + ", ".join(arxiv_authors)
+
+with open(prefix + "arxiv_authors.txt", "w") as outfile:
+    outfile.write(arxiv_authors)
 
 
 
