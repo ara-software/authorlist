@@ -3,10 +3,10 @@ Chiba:
   shortid: Chiba University
   address: International Center for Hadron Astrophysics, Chiba University, Chiba 263-8522 Japan
 
-Denison:
-  instituteid: Denison
-  shortid: Denison University
-  address: Dept. of Physics and Astronomy, Denison University, Granville, Ohio 43023
+DESY:
+  instituteid: DESY
+  shortid: Deutsches Elektronen-Synchrotron
+  address: DESY, Platanenallee 6, 15738 Zeuthen, Germany
 
 KU:
   instituteid: KU
