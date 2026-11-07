@@ -20,13 +20,6 @@ P. Allison:
   inspireid: INSPIRE-00149453
   email: allison.122@osu.edu
 
-J.J. Beatty:
-  authlistname: J.J. Beatty
-  affiliations: 
-    - OSU
-  orcid: 0000-0003-0481-4952
-  email: beatty.85@osu.edu
-
 D.Z. Besson:
   authlistname: D.Z. Besson
   affiliations: 
@@ -88,13 +81,6 @@ K. Couberly:
   orcid: 0000-0001-5311-3648
   email: kcouberly@ku.edu
 
-L. Cremonesi:
-  authlistname: L. Cremonesi
-  affiliations: 
-    - UCL
-  orcid: 0000-0003-0711-1056
-  email: l.cremonesi@qmul.ac.uk
-
 A. Cummings:
   authlistname: A. Cummings
   affiliations:
@@ -110,22 +96,7 @@ P. Dasgupta:
     - OSU
   orcid: 0000-0002-9559-4803
   inspireid: INSPIRE-00808396
-  email: paramita.dasgupta@ulb.be
-
-R. Debolt:
-  authlistname: R. Debolt
-  affiliations: 
-    - OSU
-  orcid: 0009-0001-1252-0199
-  email: RyanTDebolt@gmail.com
-
-S. de Kockere:
-  authlistname: S. de Kockere
-  affiliations: 
-    - VUB
-  orcid: 0000-0001-6724-012X
-  inspireid: INSPIRE-00808403
-  email: simon.de.kockere@vub.be
+  email: dasgupta.80@osu.edu
 
 K.D. de Vries:
   authlistname: K.D. de Vries
@@ -156,20 +127,6 @@ J. Flaherty:
   orcid: 0000-0003-3609-7361
   email: flaherty.147@osu.edu
 
-E. Friedman:
-  authlistname: E. Friedman
-  affiliations: 
-    - UMD
-  inspireid: INSPIRE-00821147
-  email: efriedman09@gmail.com
-
-R. Gaior:
-  authlistname: R. Gaior
-  affiliations: 
-    - Chiba
-  inspireid: INSPIRE-00281794
-  email: gaior@hepburn.s.chiba-u.ac.jp
-
 P. Giri:
   authlistname: P. Giri
   affiliations:
@@ -183,13 +140,6 @@ J. Hanson:
     - Whittier
   inspireid: INSPIRE-00808348
   email: jordan.hanson@icecube.wisc.edu
-
-N. Harty:
-  authlistname: N. Harty
-  affiliations:
-    - UD
-  inspireid: INSPIRE-00808417
-  email: nicholas.harty@icecube.wisc.edu
 
 K.D. Hoffman:
   authlistname: K.D. Hoffman
@@ -210,7 +160,7 @@ K. Hughes:
   affiliations: 
     - OSU
   orcid: 0000-0002-4551-9581
-  email: kaeli@psu.edu
+  email: hughes.525@osu.edu
 
 A. Ishihara:
   authlistname: A. Ishihara
@@ -233,13 +183,6 @@ J.L. Kelley:
   orcid: 0000-0002-0846-4542
   inspireid: INSPIRE-00325390
   email: jkelley@icecube.wisc.edu
-
-K.-C. Kim:
-  authlistname: K.-C. Kim
-  affiliations: 
-    - UMD
-  inspireid: INSPIRE-00808574
-  email: kichun.kim@icecube.wisc.edu
 
 M.-C. Kim:
   authlistname: M.-C. Kim
@@ -310,9 +253,6 @@ M.S. Muzio:
   authlistname: M.S. Muzio
   affiliations:
     - UW
-    - PSUigc
-    - PSUphys
-    - PSUast
   orcid: 0000-0003-4615-5529
   email: muzio@wisc.edu 
 
@@ -366,10 +306,10 @@ Y. Pan:
 
 C. Pfendner:
   authlistname: C. Pfendner
-  affiliations: 
-    - Denison
+  affiliations:
+    - UNAF
   orcid: 0000-0001-6475-7289
-  email: pfendnerc@denison.edu
+  email: carl.pfendner@gmail.com
 
 N. Punsuebsay:
   authlistname: N. Punsuebsay
@@ -414,13 +354,6 @@ Y.-S. Shiao:
   orcid: 0000-0001-5275-0717
   email: jshiao@phys.ntu.edu.tw
 
-J. Stethem:
-  authlistname: J. Stethem
-  affiliations:
-    - OSU
-  orcid: 0009-0006-1416-602X
-  email: stethem@uchicago.edu
-
 S.C. Su:
   authlistname: S.C. Su
   affiliations:
@@ -441,13 +374,6 @@ J. Torres:
     - OSU
   orcid: 0000-0003-4385-6127
   email: jorge.torresespinosa@yale.edu
-
-J. Touart:
-  authlistname: J. Touart
-  affiliations: 
-    - UMD
-  inspireid: INSPIRE-00808589
-  email: touart@umd.edu
 
 N. van Eijndhoven:
   authlistname: N. van Eijndhoven
@@ -486,6 +412,7 @@ P. Windischhofer:
   authlistname: P. Windischhofer
   affiliations:
     - UC
+    - DESY
   orcid: 0000-0001-5038-1399
   email: philipp.windischhofer@uchicago.edu 
 
@@ -498,13 +425,6 @@ S.A. Wissel:
   orcid: 0000-0003-0569-6978
   email: szw5718@psu.edu
 
-C. Xie:
-  authlistname: C. Xie
-  affiliations:
-    - UCL
-  inspireid: INSPIRE-00808557
-  email: cheng.xie.19@ucl.ac.uk
-
 S. Yoshida:
   authlistname: S. Yoshida
   affiliations: 
@@ -512,9 +432,3 @@ S. Yoshida:
   orcid: 0000-0003-2480-5105
   email: syoshida@hepburn.s.chiba-u.ac.jp
 
-R. Young:
-  authlistname: R. Young
-  affiliations: 
-    - KU
-  inspireid: INSPIRE-00573606
-  email: rwyoung@ku.edu
