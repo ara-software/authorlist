@@ -20,13 +20,6 @@ P. Allison:
   inspireid: INSPIRE-00149453
   email: allison.122@osu.edu
 
-J.J. Beatty:
-  authlistname: J.J. Beatty
-  affiliations: 
-    - OSU
-  orcid: 0000-0003-0481-4952
-  email: beatty.85@osu.edu
-
 D.Z. Besson:
   authlistname: D.Z. Besson
   affiliations: 
@@ -313,6 +306,8 @@ Y. Pan:
 
 C. Pfendner:
   authlistname: C. Pfendner
+  affiliations:
+    - SHINE
   orcid: 0000-0001-6475-7289
   email: carl.pfendner@gmail.com
 
