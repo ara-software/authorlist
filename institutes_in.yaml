@@ -58,10 +58,10 @@ PSUphys:
   shortid: Dept. of Physics, Pennsylvania State University
   address: Dept. of Physics, Pennsylvania State University, University Park, PA 16802
 
-SHINE:
-  instituteid: SHINE
-  shortid: SHINE Technologies
-  address: SHINE Technologies, Janesville, WI 53546
+UNAF:
+  instituteid: UNAF
+  shortid: Unaffilliated
+  address: Unaffiliated, Madison, WI 53706
 
 UC:
   instituteid: UC
