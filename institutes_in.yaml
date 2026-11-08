@@ -93,6 +93,11 @@ UNL:
   shortid: University of Nebraska-Lincoln
   address: Dept. of Physics and Astronomy, University of Nebraska, Lincoln, Nebraska 68588
 
+Utah:
+  instituteid: Utah
+  shortid: University of Utah
+  address: Dept. of Physics and Astronomy, University of Utah, Salt Lake City, UT 84112
+
 UW:
   instituteid: UW
   shortid: University of Wisconsin-Madison
